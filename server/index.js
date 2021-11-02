@@ -1,6 +1,7 @@
 const express = require("express");
 
 const logRoutes = require('../routes/logRoutes')
+const dbDataRoutes = require('../routes/dbDataRoutes')
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/api",logRoutes)
+app.use("/api",dbDataRoutes)
 
 var sql = require("mssql");
 var config = require("../dbconfig")

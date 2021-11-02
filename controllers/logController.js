@@ -4,7 +4,7 @@ const  sql = require('mssql');
 
 const postDescription = (req, res) => {
 
-    // console.log({ message: "API Working",data:req.body})
+    
   
    
    var sqlConn = new sql.ConnectionPool(config);
