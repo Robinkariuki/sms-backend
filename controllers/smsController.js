@@ -1,6 +1,20 @@
 const axios = require('axios')
 
 
+
+const callBackSms = (req,res) =>{
+
+    const response = req.body
+
+   
+    return res.send(response)
+
+}
+
+
+
+
+
 const SendBulkSms =(req,res)=>{
    
 
@@ -28,10 +42,10 @@ const SendBulkSms =(req,res)=>{
     })
     .then(resp=>{
         
-        return res.send(resp.data.statusDescription)
+        return res.send(resp)
     })
     .catch(function(err) {
-        console.log(err)
+        
         return res.send(err)
         
     })
@@ -47,3 +61,7 @@ const SendBulkSms =(req,res)=>{
 
 
 exports.SendBulkSms = SendBulkSms
+
+
+
+exports.callBackSms  = callBackSms 

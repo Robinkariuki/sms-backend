@@ -4,6 +4,7 @@ const smsController = require('../controllers/smsController')
 
 
 router.post('/smsbulk',smsController.SendBulkSms)
+router.post('/callback',smsController.callBackSms)
 
 
 
