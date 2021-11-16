@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 
 const logRoutes = require('../routes/logRoutes')
@@ -26,9 +27,9 @@ app.get("/", (req, res) => {
   
 });
 
-app.use("/api",smsRoutes)
-app.use("/api",logRoutes)
-app.use("/api",dbDataRoutes)
+app.use("/naivas/api",smsRoutes)
+app.use("/naivas/api",logRoutes)
+app.use("/naivas/api",dbDataRoutes)
 
 
 var sql = require("mssql");
@@ -42,6 +43,7 @@ var config = require("../dbconfig")
  });
 
 const PORT = process.env.PORT || 3001;
+
 
 
 
